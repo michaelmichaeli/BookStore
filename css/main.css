@@ -1,0 +1,215 @@
+html {
+    background-color: tomato;
+}
+
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    margin: 0;
+    /* background-color: lightgrey; */
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: rgb(212, 212, 212);
+}
+
+
+header {
+    background-color: tomato;
+    background: linear-gradient(0deg, tomato 0%, rgb(255, 59, 24) 100%);
+    background: radial-gradient(rgb(255, 138, 71), tomato);
+    padding: 10px;
+    margin-bottom: 5px;
+    color: white;
+    text-shadow: 0 4px 5px rgb(59, 0, 8);
+    margin: 0;
+    box-shadow: 0px 0px 5px 4px rgba(0, 0, 0, 0.30);
+}
+
+/* header h7, h1 {
+    font-weight: bold;
+} */
+
+.books-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+table img {
+    width: 60px;
+    /* padding: 30px; */
+}
+
+.modal {
+    background-color: white;
+    background-image: url("../img/book.png");
+    background-size: cover;
+
+    /* padding: 100px; */
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    height: 90vh;
+    min-width: 300px;
+    text-align: center;
+    /* opacity: 0.9; */
+    border-radius: 50%  0 0 50%;
+    box-shadow: 0px 0px 50px 40px rgba(0, 0, 0, 0.30);
+
+    /* width: 400px; */
+    /* left: 0; */
+}
+
+.modal p {
+    max-width: 70%;
+    right: 20px;
+    margin: 30px;
+    margin-left: 20%;
+    background-color: white 0.6;
+    text-align: justify;
+    /* color: white;s */
+    text-shadow: 0px 0px 3px white;
+}
+
+/* .add-book-section {
+    display: none;
+} */
+
+table {
+    /* padding: 20px; */
+    border-collapse: collapse;
+    box-shadow: 0px 4px 8px 3px rgba(0, 0, 0, 0.30);
+    margin-bottom: 50px;
+    border: 2px solid cadetblue;
+    border-bottom: 5px solid cadetblue;
+    background-color: #fff;
+    border-radius: 7px;
+    /* overflow: hidden; */
+
+}
+table button {
+    margin-right: 20px;
+    color: lightslategrey;
+}
+
+tr {
+    border: 1px solid cadetblue;
+    /* padding: 20px; */
+
+}
+
+td {
+    width: 80px;
+}
+
+th {
+    padding: 10px 70px;
+}
+
+button, input[type=button], input[type=submit] {
+    border: none;
+    background-color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0px 3px 6px 2px rgba(0, 0, 0, 0.30);
+    font-weight: bold;
+    padding: 7px;
+}
+button:active, input[type=button]:active, input[type=submit] :active {
+    box-shadow: 0px px 2px 1px rgba(0, 0, 0, 0.30);
+    background-color: cadetblue;   
+}
+
+
+
+ body > button {
+     margin: 20px 0 10px 0;
+ }
+
+input[type=button], input[type=submit] {
+    margin: 20px;
+}
+
+form {
+    background-color: rgb(255, 216, 172);
+    background: linear-gradient(0deg, rgb(212, 212, 212) 0%, rgba(255, 216, 172) 100%);
+    padding-top: 30px;
+    margin-bottom: 20px;
+}
+
+input[type=number] {
+    padding: 10px;
+}
+
+.input-rate p {
+    font-size: 35px;
+    display: inline-block;    
+    margin: 0;
+    text-shadow: 0px 0px 5px white;
+
+}
+
+input[name="rate"] {
+    width: 60px;
+    height: 60px;
+    background-color:rgb(212, 212, 212);
+    margin-bottom: 30px;
+    border-radius: 50%;
+    text-shadow: 0px 0px 5px white;
+
+}
+
+.modal img {
+    width: 120px;
+    margin: 0;
+    float: right;
+}
+
+.modal button {
+    display: inline-block;
+}
+
+.next-page {
+    background-color: tomato;
+    bottom: 0;
+    width: 100vw;
+    padding-bottom: 30px;
+    background: linear-gradient(180deg, rgb(129, 51, 37) 0%, tomato 20%);
+}
+
+.next-page button {
+    margin-top: 20px;
+}
+
+h7, h1{
+    margin: 0;
+    font-weight: bold;
+}
+
+h7 {
+    /* letter-spacing: 6px; */
+    word-spacing: 20px;
+    text-transform: uppercase;
+    font-size: 0.75     em;
+}
+
+h6 {
+    margin-top: 0;
+}
+
+.next-page p {
+    display: inline-block;
+    color: white;
+    font-weight: bolder;
+}
+
+.modal h5 {
+    font-size: 2em;
+    margin: 40px 0 0 0;
+    text-decoration: underline;
+    text-shadow: 0px 0px 5px white;
+
+}
