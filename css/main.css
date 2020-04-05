@@ -9,12 +9,13 @@ html, body {
 
 body {
     margin: 0;
-    /* background-color: lightgrey; */
     text-align: center;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     background-color: rgb(212, 212, 212);
 }
-
+body.rtl {
+    direction: rtl;
+}
 
 header {
     background-color: tomato;
@@ -28,10 +29,6 @@ header {
     box-shadow: 0px 0px 5px 4px rgba(0, 0, 0, 0.30);
 }
 
-/* header h7, h1 {
-    font-weight: bold;
-} */
-
 .books-container {
     display: flex;
     flex-wrap: wrap;
@@ -40,15 +37,12 @@ header {
 
 table img {
     width: 60px;
-    /* padding: 30px; */
 }
 
 .modal {
     background-color: white;
     background-image: url("../img/book.png");
     background-size: cover;
-
-    /* padding: 100px; */
     position: absolute;
     top: 20px;
     left: 50%;
@@ -58,9 +52,11 @@ table img {
     /* opacity: 0.9; */
     border-radius: 50%  0 0 50%;
     box-shadow: 0px 0px 50px 40px rgba(0, 0, 0, 0.30);
-
-    /* width: 400px; */
-    /* left: 0; */
+    animation: slide 1s forwards;
+}
+@keyframes slide {
+    100% { right: 0; }
+    0% {right: -900px}
 }
 
 .modal p {
@@ -74,10 +70,6 @@ table img {
     text-shadow: 0px 0px 3px white;
 }
 
-/* .add-book-section {
-    display: none;
-} */
-
 table {
     /* padding: 20px; */
     border-collapse: collapse;
@@ -87,18 +79,18 @@ table {
     border-bottom: 5px solid cadetblue;
     background-color: #fff;
     border-radius: 7px;
-    /* overflow: hidden; */
-
 }
 table button {
     margin-right: 20px;
     color: lightslategrey;
 }
+body.rtl table button {
+    margin-right: inherit;
+    margin-left: 20px;
+}
 
 tr {
     border: 1px solid cadetblue;
-    /* padding: 20px; */
-
 }
 
 td {
@@ -123,11 +115,9 @@ button:active, input[type=button]:active, input[type=submit] :active {
     background-color: cadetblue;   
 }
 
-
-
- body > button {
+body > button {
      margin: 20px 0 10px 0;
- }
+}
 
 input[type=button], input[type=submit] {
     margin: 20px;
@@ -169,7 +159,7 @@ input[name="rate"] {
 }
 
 .modal button {
-    display: inline-block;
+    /* display: inline-block; */
 }
 
 .next-page {
@@ -204,6 +194,7 @@ h6 {
     display: inline-block;
     color: white;
     font-weight: bolder;
+    margin: 0 40px 0 40px;
 }
 
 .modal h5 {
@@ -211,5 +202,12 @@ h6 {
     margin: 40px 0 0 0;
     text-decoration: underline;
     text-shadow: 0px 0px 5px white;
+}
 
+select {
+    margin: 0 100px 0 100px;
+}
+
+.sort-table {
+    cursor: pointer;
 }

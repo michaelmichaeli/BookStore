@@ -6,34 +6,55 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/main.css">
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"> -->
     <title>Books Store</title>
 </head>
 
 <body onload="onInit()">
     <header>
-        <h1>Books CRUDL with MVC in mind</h1>
-        <!-- <h7>Create   |   Read   |   Update   |   Delete   |   List</h2> -->
+        <h1 data-trans="title">Books CRUDL with MVC in mind</h1>
+        <h7 data-trans="subtitle">Create | Read | Update | Delete | List</h7>
+        <select onchange="onSetLang(this.value)">
+            <option value="en">English</option>
+            <option value="he">עברית</option>
+        </select>
     </header>
     <section class="add-book-section" hidden>
         <form>
-            <label for="title">Book Title:</label>
+            <label for="title" data-trans="addBookTitle">Book Title:</label>
             <input type="text" id="title" name="title"><br><br>
-            <label for="price">Price:</label>
+            <label for="price" data-trans="addBookPrice">Price:</label>
             <input type="text" id="price" name="price"><br><br>
-            <button value="Submit" onclick="onSubmit()">
+            <button value="Submit" onclick="onSubmit()" data-trans="addBookSubmit">Submit</button>
         </form>
     </section>
-    <button type="button" onclick="onShowAddBook()">Add Book</button>
+    <section class="update-book-section" hidden>
+        <form>
+            <label for="title" data-trans="addBookTitle">Book Title:</label>
+            <input type="text" id="updateTitle" name="title"><br><br>
+            <label for="price" data-trans="addBookPrice">Price:</label>
+            <input type="text" id="updatePrice" name="price"><br><br>
+            <button value="Submit" onclick="onUpdate()" data-trans="addBookSubmit">Submit</button>
+        </form>
+    </section>
+
+
+
+    <button type="button" onclick="onShowAddBook()" data-trans="addBookBtn">Add Book</button>
 
 
     <section class="books-container">
-        
-    </section>  <!--THIS IS THE TABLE-->
-    
-    
+        <!--THIS IS THE TABLE-->
+
+    </section>
+
+
+
     <div class="next-page">
+        <button onclick="onPrevPage()" data-trans="previousPage">Previous Page &gt; </button>
         <p></p>
-        <button onclick="onNextPage()">Next Page &gt; </button>
+        <button onclick="onNextPage()" data-trans="nextPage">Next Page &gt; </button>
     </div>
 
     <div class="modal" hidden>
@@ -46,9 +67,11 @@
             <p>&#11088;</p>
             <input type="number" step="1" max="10" min="0" value="5" name="rate" id="rf" style="font-size: 35px;">
         </div>
-        <button onclick="onCloseModal()">Close</button>
+        <button onclick="onCloseModal()" data-trans="closeModalBtn">Close</button>
     </div>
 
+    
+    <script src="js/i18n-service.js"></script>
     <script src="js/util-service.js"></script>
     <script src="js/storage-service.js"></script>
     <script src="js/book-service.js"></script>
